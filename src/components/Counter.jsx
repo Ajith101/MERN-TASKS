@@ -4,8 +4,10 @@ function Counter({ count, onIncrement, onDecrement }) {
   return (
     <div className="App">
       <div className="card">
-        <span style={{ "--i": 0 }}></span>;<span style={{ "--i": 1 }}></span>;
-        <span style={{ "--i": 2 }}></span>;<span style={{ "--i": 3 }}></span>;
+        <span style={{ "--i": 0 }}></span>
+        <span style={{ "--i": 1 }}></span>
+        <span style={{ "--i": 2 }}></span>
+        <span style={{ "--i": 3 }}></span>
         <div className="glass">
           <h1>Counter {count}</h1>
           <div>
