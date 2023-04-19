@@ -9,6 +9,7 @@ function Counter({ count, onIncrement, onDecrement }) {
         <span style={{ "--i": 2 }}></span>
         <span style={{ "--i": 3 }}></span>
         <div className="glass">
+          <h1>!!!</h1>
           <h1>Counter {count}</h1>
           <div>
             <button onClick={onIncrement}>Increment</button>
