@@ -1,24 +1,7 @@
-import "./Counter.css";
+import React from "react";
 
-function Counter({ count, onIncrement, onDecrement }) {
-  return (
-    <div className="App">
-      <div className="card">
-        <span style={{ "--i": 0 }}></span>
-        <span style={{ "--i": 1 }}></span>
-        <span style={{ "--i": 2 }}></span>
-        <span style={{ "--i": 3 }}></span>
-        <div className="glass">
-          <h1>!!!</h1>
-          <h1>Counter {count}</h1>
-          <div>
-            <button onClick={onIncrement}>Increment</button>
-            <button onClick={onDecrement}>Decrement</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+const Counter = () => {
+  return <div>Counter</div>;
+};
 
 export default Counter;
