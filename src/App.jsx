@@ -1,28 +1,26 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Counter from "./components/Counter";
+import "./app.css";
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
 
-  const onIncrement = () => {
+  const increment = () => {
     if (count !== 10) {
       setCount((pre) => pre + 1);
     }
   };
-  const onDecrement = () => {
+  const decrement = () => {
     if (count !== 0) {
       setCount((pre) => pre - 1);
     }
   };
+
   return (
-    <div className="App">
-      <Counter
-        count={count}
-        onIncrement={onIncrement}
-        onDecrement={onDecrement}
-      />
+    <div className="main">
+      <Counter increment={increment} decrement={decrement} count={count} />
     </div>
   );
-}
+};
 
 export default App;
