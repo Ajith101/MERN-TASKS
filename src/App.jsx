@@ -1,25 +1,34 @@
-import React, { useState } from "react";
-import Counter from "./components/Counter";
-import "./app.css";
+import React, { useEffect, useState } from "react";
+import Accordion from "./components/FAQ/Accordion";
+import UserList from "./components/API/UserList";
+import "./App.css";
+import axios from "axios";
+import Carousel from "./components/carousel/Carousel";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = () => {
-    if (count !== 10) {
-      setCount((pre) => pre + 1);
-    }
-  };
-  const decrement = () => {
-    if (count !== 0) {
-      setCount((pre) => pre - 1);
-    }
-  };
+  if (window.location.pathname === "/accordion") {
+    return <Accordion />;
+  } else if (window.location.pathname === "/user-list") {
+    return <UserList />;
+  } else if (window.location.pathname === "/carousel") {
+    return <Carousel />;
+  }
 
   return (
-    <div className="main">
-      <Counter increment={increment} decrement={decrement} count={count} />
-    </div>
+    <>
+      <div className="header"></div>
+      <div className="home">
+        <a className="button-85" href="/accordion">
+          accordion
+        </a>
+        <a className="button-85" href="/user-list">
+          UserList
+        </a>
+        <a className="button-85" href="/carousel">
+          Carousel
+        </a>
+      </div>
+    </>
   );
 };
 
