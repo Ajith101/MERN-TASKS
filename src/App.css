@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+.toogle {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  background: blanchedalmond;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+  border-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.first-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-section img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50px;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 50%;
+  height: 100vh;
+
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+.main-body {
+  position: absolute;
+  background-image: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.main-body button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 24px;
+  width: 80%;
+  text-align: center;
+  font-size: 22px;
+  border: none;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  );
+  color: #fff;
+
+  /* background: green;
+  color: white;
+  padding: 25px;
+  border-radius: 5px;
+  text-align: center;
+  border-width: 0;
+  font-size: 22px;
+  font-weight: 600;
+  width: 80%; */
+}
+.main-body input[type="text"] input[type="email"] {
+  width: 70%;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+}
+.radio h3 {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #000a47;
+  line-height: 1.15;
+  font-size: 16px;
+  width: 30%;
+  max-width: 110px;
+  text-align: center;
+}
+.radio .selector {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2px;
+  width: 70%;
+}
+.languages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  color: #fff;
+}
+.languages .languages-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.languages h3 {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #000a47;
+  line-height: 1.15;
+  font-size: 16px;
+  width: 30%;
+  max-width: 110px;
+  text-align: center;
+}
+.input-itemes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.input-itemes h3 {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 12px 24px;
+  border: 0;
+  color: #fff;
+  background: #000a47;
+  line-height: 1.15;
+  font-size: 16px;
+  width: 30%;
+  max-width: 110px;
+  text-align: center;
+}
+
+.input-itemes h3:hover {
+  transition: all 0.1s ease;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+.form-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.counrty {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.form-title {
+  font-size: 65px;
+  margin: 25px 0;
+  color: #fff;
+  font-weight: 600;
+}
+.main-heading {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+select {
+  width: 200px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+select option {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  background-color: #f1f1f1;
+}
+
+select option:hover {
+  background-color: #e0e0e0;
+}
+
+select option:checked {
+  background-color: #d1d1d1;
+}
