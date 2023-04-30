@@ -1,13 +1,13 @@
 import React from "react";
 
 const InputForms = ({ handleBlur, handleChange, errorValues, values }) => {
-  const { name, type } = values;
+  const { name, type, title } = values;
 
   return (
     <>
       <div className="input-section">
         <h2>
-          First Name <span>*</span>
+          {title} <span>*</span>
         </h2>
         <input
           type={type}
@@ -15,7 +15,7 @@ const InputForms = ({ handleBlur, handleChange, errorValues, values }) => {
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        {errorValues && <h3>{name} Rquired</h3>}
+        {errorValues && <h3>{title} Rquired</h3>}
       </div>
     </>
   );

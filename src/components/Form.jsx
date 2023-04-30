@@ -111,13 +111,13 @@ const Form = () => {
           handleChange={handleChange}
           handleBlur={handleBlur}
           errorValues={errorValues.firstName}
-          values={{ name: "firstName", type: "text" }}
+          values={{ name: "firstName", type: "text", title: "First Name" }}
         />
         <InputForms
           handleChange={handleChange}
           handleBlur={handleBlur}
           errorValues={errorValues.email}
-          values={{ name: "email", type: "email" }}
+          values={{ name: "email", type: "email", title: "Email" }}
         />
         <RadioForms
           handleChange={handleChange}
