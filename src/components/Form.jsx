@@ -61,7 +61,12 @@ const Form = () => {
     if (formValue.firstName === "" || formValue.firstName.length < 3) {
       errors.firstName = true;
     }
-    if (formValue.email === "") {
+    if (
+      formValue.email === "" ||
+      !/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(
+        formValue.email
+      )
+    ) {
       errors.email = true;
     }
     if (formValue.country === "") {
@@ -85,7 +90,7 @@ const Form = () => {
   const handleBlur = (event) => {
     const { name, value } = event.target;
     let error = false;
-    if (name === "firstName" && value === "") {
+    if (name === "firstName" && (value === "" || value.length < 3)) {
       error = true;
     } else if (
       name === "email" &&
