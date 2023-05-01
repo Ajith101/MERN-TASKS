@@ -1,0 +1,32 @@
+.search-bar-container {
+  width: 100%;
+  background: rgb(212, 201, 201);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.search-bar-container .close-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-bar-container .search-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.search-bar-container .search-icon img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+.search-bar-container .search-icon input {
+  width: 100%;
+  padding: 10px;
+}
+.search-bar-container .close-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
