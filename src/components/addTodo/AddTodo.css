@@ -1,0 +1,33 @@
+.add-todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 36px 0;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.add-todo-container .input-section {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.add-todo-container input {
+  width: 100%;
+  outline: none;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #152431;
+  color: #8fa8c1;
+  font-size: 12px;
+  border: 1px solid rgba(143, 168, 193, 0.5);
+}
+.add-todo-container button {
+  background: #0c5488;
+  color: #8fa8c1;
+  font-weight: 500;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 4px;
+}

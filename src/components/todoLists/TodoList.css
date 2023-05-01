@@ -1,0 +1,16 @@
+.todo-list-container {
+  width: 100%;
+  padding: 0 50px;
+  border: none;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(143, 168, 193, 0.3);
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo-list-container .todo-list-icons {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}

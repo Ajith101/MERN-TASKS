@@ -1,0 +1,41 @@
+.edite-todo-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  gap: 9px;
+  border-bottom: 1px dashed rgba(143, 168, 193, 0.3);
+  height: 69px;
+}
+.edite-todo-container input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #152431;
+  color: #8fa8c1;
+  font-size: 12px;
+  border: 1px solid rgba(143, 168, 193, 0.5);
+}
+.edite-todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.edite-todo-actions .save {
+  background: #0c5488;
+  color: #8fa8c1;
+  font-weight: 500;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 4px;
+}
+.edite-todo-actions .cancel {
+  background: #8fa8c1;
+  color: #0c5488;
+  font-weight: 500;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 4px;
+}
