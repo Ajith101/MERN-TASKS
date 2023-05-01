@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { AddTodo } from "./addTodo/AddTodo";
 import { TodoList } from "./todoLists/TodoList";
-import { EditeTodo } from "./editeTodo/EditeTodo";
 
 export const Home = () => {
   const [formValue, setFormValue] = useState([]);
@@ -17,7 +16,24 @@ export const Home = () => {
     }
     setFormValue([...formValue, todoText]);
     setTodoText({ ...todoText, todo: "" });
+    const localStorageValus = [...formValue, todoText];
+    if (localStorageValus) {
+      localStorage.setItem("todos", JSON.stringify(localStorageValus));
+    }
   };
+
+  const localStorages = () => {
+    setFormValue(
+      localStorage.getItem("todos")
+        ? JSON.parse(localStorage.getItem("todos"))
+        : []
+    );
+  };
+
+  useEffect(() => {
+    localStorages();
+  }, []);
+
   const inputHandler = (event) => {
     setTodoText({ ...todoText, todo: event.target.value });
     let error = false;
@@ -27,14 +43,17 @@ export const Home = () => {
     setErrorValues((pre) => ({ ...pre, todo: error }));
   };
   const deleteTodo = (id) => {
-    setFormValue((pre) => [...pre.filter((item, ids) => id !== ids)]);
+    const results = [...formValue.filter((item, ids) => id !== ids)];
+    localStorage.setItem("todos", JSON.stringify(results));
+    setFormValue(results);
   };
   const checkTrue = (id) => {
     const newList = [...formValue];
     const latestResults = newList.map((item, ids) =>
-      ids === id ? { ...item, isComplete: true } : item
+      ids === id ? { ...item, isComplete: !item.isComplete } : item
     );
     setFormValue(latestResults);
+    localStorage.setItem("todos", JSON.stringify(latestResults));
   };
   const editeTodos = (id) => {
     setEditeTodoss(id);
@@ -57,7 +76,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="bg-box"> </div>
+      <div className="bg-box"></div>
       <div className="home-container">
         <h1>Todo list</h1>
         <AddTodo
@@ -66,8 +85,7 @@ export const Home = () => {
           todoText={todoText}
           errorValues={errorValues}
         />
-
-        {displayTodos}
+        <div className="todo-list-main-container">{displayTodos}</div>
       </div>
     </>
   );

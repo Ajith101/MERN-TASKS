@@ -17,11 +17,11 @@ export const EditeTodo = ({
   // console.log(formValue);
   const submitEdite = () => {
     const newValues = [...formValue];
-    setFormValue(
-      newValues.map((item, ids) =>
-        id === ids ? { ...item, todo: todoForms.todo } : item
-      )
+    const results = newValues.map((item, ids) =>
+      id === ids ? { ...item, todo: todoForms.todo } : item
     );
+    setFormValue(results);
+    localStorage.setItem("todos", JSON.stringify(results));
     editeTodos("");
   };
 

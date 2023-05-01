@@ -37,8 +37,16 @@ export const TodoList = ({
             {item.todo}
           </p>
           <div className="todo-list-icons">
-            <FaPencilAlt onClick={() => editeTodos(id)} size={"24px"} />
-            <AiFillDelete onClick={() => deleteTodo(id)} size={"24px"} />
+            <FaPencilAlt
+              style={{ cursor: "pointer" }}
+              onClick={() => editeTodos(id)}
+              size={"24px"}
+            />
+            <AiFillDelete
+              style={{ cursor: "pointer" }}
+              onClick={() => deleteTodo(id)}
+              size={"24px"}
+            />
           </div>
         </div>
       )}

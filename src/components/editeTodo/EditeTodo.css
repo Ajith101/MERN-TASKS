@@ -17,6 +17,7 @@
   color: #8fa8c1;
   font-size: 12px;
   border: 1px solid rgba(143, 168, 193, 0.5);
+  outline: none;
 }
 .edite-todo-actions {
   display: flex;
