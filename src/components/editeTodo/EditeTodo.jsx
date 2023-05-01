@@ -19,7 +19,7 @@ export const EditeTodo = ({
     const newValues = [...formValue];
     setFormValue(
       newValues.map((item, ids) =>
-        id === ids ? { ...item, todo: todoForms.todo === item.todo } : item
+        id === ids ? { ...item, todo: todoForms.todo } : item
       )
     );
     editeTodos("");
