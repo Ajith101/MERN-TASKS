@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { SearchBar } from "./searchBar/SearchBar";
 import "./Search.css";
 import { SearchList } from "./searchList/SearchList";
+// import { axios } from "axios";
 import axios from "axios";
 
 export const Search = () => {
