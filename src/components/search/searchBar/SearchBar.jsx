@@ -3,14 +3,34 @@ import SearchIcon from "../../../assets/search-icon.png";
 import closeIcon from "../../../assets/close-icon.png";
 import "./SearchBar.css";
 
-export const SearchBar = ({ handleChange }) => {
+export const SearchBar = ({
+  handleChange,
+  setSearchInput,
+  searchInput,
+  setLoading,
+}) => {
   return (
     <div className="search-bar-container">
       <div className="search-icon">
-        <img src={SearchIcon} alt="" />{" "}
-        <input type="text" placeholder="Search" onChange={handleChange} />
+        <img src={SearchIcon} alt="" />
+        <input
+          type="text"
+          placeholder={`${
+            window.location.pathname === "/"
+              ? "Search Your Movies Here"
+              : "Search Mobiles Here"
+          }`}
+          onChange={handleChange}
+          value={searchInput}
+        />
       </div>
-      <div className="close-icon">
+      <div
+        onClick={() => {
+          setSearchInput("");
+          setLoading((pre) => (pre = false));
+        }}
+        className="close-icon"
+      >
         <img src={closeIcon} alt="" />
       </div>
     </div>
