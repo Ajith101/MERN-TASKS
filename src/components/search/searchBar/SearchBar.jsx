@@ -31,7 +31,7 @@ export const SearchBar = ({
         }}
         className="close-icon"
       >
-        <img src={closeIcon} alt="" />
+        {searchInput && <img src={closeIcon} alt="" />}
       </div>
     </div>
   );
